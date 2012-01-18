@@ -14,13 +14,13 @@ Setting Up Your VHOST
 The following is a sample VHOST you might want to consider for your project.
 
 <VirtualHost *:80>
-   DocumentRoot "/Users/jianqsun/Zend/workspaces/DefaultWorkspace7/testweb1/public"
-   ServerName testweb1.local
+   DocumentRoot "/Users/jianqsun/Zend/workspaces/DefaultWorkspace7/dbay/public"
+   ServerName dbay.local
 
    # This should be omitted in the production environment
    SetEnv APPLICATION_ENV development
     
-   <Directory "/Users/jianqsun/Zend/workspaces/DefaultWorkspace7/testweb1/public">
+   <Directory "/Users/jianqsun/Zend/workspaces/DefaultWorkspace7/dbay/public">
        Options Indexes MultiViews FollowSymLinks
        AllowOverride All
        Order allow,deny

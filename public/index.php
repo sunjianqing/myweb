@@ -14,25 +14,13 @@ set_include_path(implode(PATH_SEPARATOR, array(
     get_include_path(),
 )));
 
-// Include models 
-set_include_path(implode(PATH_SEPARATOR, array(
-    realpath(APPLICATION_PATH . '/models'),
-    get_include_path(),
-)));
-
 /** Zend_Application */
 require_once 'Zend/Application.php';
-/*
 
-$dbconf = new Zend_Config_Ini(APPLICATION_PATH.'/configs/application.ini','development');
-$db = Zend_Db::factory($dbconf->database);
-
-Zend_Db_Table_Abstract::setDefaultAdapter($db);
-Zend_Registry::set('db',$db);
-*/
 // Create application, bootstrap, and run
 $application = new Zend_Application(
     APPLICATION_ENV,
     APPLICATION_PATH . '/configs/application.ini'
 );
-$application->bootstrap()->run();
+$application->bootstrap()
+            ->run();
