@@ -1,5 +1,5 @@
-#Thu Nov 17 11:40:02 PST 2011
+#Wed Jan 18 00:18:35 PST 2012
 eclipse.preferences.version=1
-include_path=5;org.zend.php.framework.CONTAINER\u00055;com.zend.php.phpunit.CONTAINER
-phpVersion=php5
+include_path=0;/dbay1\u00055;org.zend.php.framework.CONTAINER
+phpVersion=php5.3
 use_asp_tags_as_php=false
