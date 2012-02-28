@@ -13,6 +13,15 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
         Zend_Registry::set($dbs['params']['dbname'], $init_db);
         Zend_Db_Table::setDefaultAdapter($init_db); 
     }
+    
+	protected function _initViewHelpers() {
+     	
+		$this->bootstrap('layout');
+     	
+        $layout = $this->getResource('layout');
+        $view = $layout->getView();
+        //$view->user = $user = Zend_Auth::getInstance()->getStorage()->read();
+	}
 
 }
 

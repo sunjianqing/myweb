@@ -1,0 +1,245 @@
+@CHARSET "UTF-8";
+
+body
+{
+	margin:auto;
+	background: none repeat scroll 0 0 #F5F5F5;
+}
+.outside_div{
+	//border-bottom: 2px solid #DCDCDC;
+	display:block;
+}
+
+.inside_div{
+	width:960px;
+	margin:auto;
+}
+#header
+{
+height: 65px;
+}
+
+.nav-bar a
+{	
+	text-decoration:none;
+}
+ul {
+    //list-style: none outside none;
+}
+.nav-bar  li {
+    display: inline;
+	color:#2F71EB;
+}
+
+.nav_char{
+	color:#E04141;
+	font-family: "Microsoft Yahei","Helvetica Neue","Luxi Sans","DejaVu Sans",Tahoma,"Hiragino Sans GB",STHeiti !important;
+	font-size:12px;
+}
+#logo_div{
+	float:left;
+}
+#title_bar_div{
+	float:right;
+}
+
+.partner_login{
+	padding: 1px 0 0 18px;
+}
+
+.partner_login:hover{
+	color:#E04141;
+}
+#renren_login{
+	background: url("images/renren_15.jpg") no-repeat scroll left center transparent;
+}
+
+.box{
+	background: none repeat scroll 0 0 #FFFefa;
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 1px 3px rgba(34, 25, 25, 0.2);
+	font-size:12px;
+	text-align:center;
+}
+
+.main {
+	position:absolute;
+	top:45px;
+}
+#footer{
+	//border-top: 1px solid #DCDCDC;
+	width:960px;
+	margin:auto;
+}
+.float_left{
+	//float:left;
+	
+}
+.float_right{
+	//float:left;
+	
+}
+#search_div{
+	width:400px;
+}
+
+.box_div{
+	border: 1px solid #CCCCCC;
+	padding:5px;
+	margin:5px;
+	font-size:12px;
+	font-family	"Helvetica Neue",Helvetica,"Lucida Grande",Arial,sans-serif;
+	
+}
+#main_top{
+	width:100%;	
+}
+#main_middle{
+	width:400px;
+	margin:auto;
+	display:inline;
+}
+
+.link_btn{
+	background-clip: padding-box;
+    background-color: #5BA53C;
+    background-image: -moz-linear-gradient(#8ABC6B, #579544);
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.5) inset, 0 1px 0 rgba(0, 0, 0, 0.6);
+    color: #FFFFFF !important;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: 500;
+    height: 24px;
+    line-height: 24px;
+    margin: 0 1px 1px;
+    padding: 0 25px;
+    
+    right: 0;
+    text-align: center;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
+    
+}
+
+#search_box{
+	width:300px;
+	height:28px;
+}
+#main_bottom{
+	padding:15px;
+}
+#sepr_line{
+	border-top: 1px dashed #B4B8B7;
+	width:100%;
+}
+.wp {position: relative;width:100%;height:300px;overflow:hidden;margin:auto;background:#fff;}
+.slider {position: absolute;width: 100%;padding:0;left:0;top: 0;}
+.fl {float:left}
+.slider img {display:block; padding: 2px; border: 1px solid #ccc} 
+.slider li {padding: 10px 0; border-bottom: 1px dashed #ccc;overflow:hidden;width:100%}
+.slider p {font-size: 12px;margin:0;padding-left:68px;color:#333;line-height:20px;}
+
+.red_div{
+	background-color: #FfF123;
+}
+
+.height28{
+	height:28px;
+}
+.people_tbl{
+	border-width: 0px;
+	border-spacing: 5px;
+	border-collapse: separate;
+}
+.people_tbl td{
+	border-width: 1px;
+	padding: 5px;
+	border-style: solid;
+	border-color: gray;
+	//background-color: white;
+	text-align:center;
+	padding:5px;
+	
+}
+.box{
+	border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
+    margin-bottom: 20px;
+    min-height: 20px;
+}
+
+.box2{
+	//border: 1px solid;
+	border-color:#000000;
+   	margin-bottom: 20px;
+    min-height: 20px;
+}
+
+.box3{
+	box-shadow:0pt 2px 4px rgba(0,0,0,0.2);		
+}
+
+#activity_list{
+list-style: none outside none;
+}
+#activity_list p{
+	width:100%;
+	text-align:left;
+	color:#0088CC;;
+}
+
+#gallery_div{
+	margin-top:45px;
+	margin-bottom:10px;
+}
+.people_label{
+	padding-left:3px;
+}
+
+#main_container{
+	margin-top:65px;
+}
+
+.dash-line {
+    background: url("../images/dash-line.gif") repeat-x scroll 0 0 transparent;
+    height: 2px;
+    margin: 20px 0;
+    width: 100%;
+}
+
+.h1{
+	font-size:25px;
+}
+
+#login_form{
+	padding-top:10px;
+}
+.input_div{
+	display:table;
+}
+
+label {
+    color: #333333;
+    display: block;
+    margin-bottom: 5px;
+}
+
+#login_form label{
+	float: left;
+    padding-top: 5px;
+    text-align: right;
+    width: 60px;
+	font-family: Arial;
+    font-size: 12px;
+}
+
+#other_login{
+	margin:20px 0 20 20px;
+	padding: 10px 0 0 20px;
+	border-left: 1px solid #DDDDDD;
+	min-height: 200px;
+}
+
+}

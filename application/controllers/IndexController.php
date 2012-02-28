@@ -10,7 +10,12 @@ class IndexController extends Zend_Controller_Action
 
     public function indexAction()
     {
-        // action body
+		// get the user info from the storage (session)  
+		$userInfo = Zend_Auth::getInstance()->getStorage()->read();  
+		if(!empty($userInfo)){
+			$this->view->userinfo = $userInfo;
+		}
+       
     }
 	 
 

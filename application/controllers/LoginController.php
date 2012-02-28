@@ -23,19 +23,59 @@ class  LoginController extends Zend_Controller_Action{
     {
     	$login_ok = false;
 
+    	// If we're already logged in, just redirect  
+        if(Zend_Auth::getInstance()->hasIdentity())  
+        {  
+            $this->_redirect('index');  
+        }
+    	
     	$username = $this->_request->username;
     	$passwd = $this->_request->passwd;
     	if(!empty($username) && !empty($passwd))
     	{
+    		$dbAdapter = Zend_Db_Table::getDefaultAdapter(); 
+    		
+			$authAdapter = new Zend_Auth_Adapter_DbTable($dbAdapter);  
+    		$authAdapter->setTableName('user')  
+            ->setIdentityColumn('username')  
+            ->setCredentialColumn('passwd')  
+            ->setCredentialTreatment('MD5(?)'); 
+			
+            $authAdapter->setIdentity($username)  
+            ->setCredential($passwd);  
+  
+            $auth = Zend_Auth::getInstance();  
+			$result = $auth->authenticate($authAdapter); 
+			
+			if($result->isValid())  
+			{  
+			    // get all info about this user from the login table  
+			    // ommit only the password, we don't need that  
+			    $userInfo = $authAdapter->getResultRowObject(null, 'passwd');  
+			    // the default storage is a session with namespace Zend_Auth  
+			    $authStorage = $auth->getStorage();  
+			    $authStorage->write($userInfo);  
+			    $this->_redirect('index');  
+			}
+
+    		/*
     		$user = new User();
         	$login_ok = $user->userAuth($username, $passwd);
+    		*/
     	}
-    	
+    	/*
     	if($login_ok == true){
- 			
-			$this->_redirector->gotoSimple('index', 'Index');
+ 			$this->_redirector->gotoSimple('index', 'Index');
     	}
+    	*/
     	
     }
+    
+	public function logoutAction()  
+	{  
+	    // clear everything - session is cleared also!  
+	    Zend_Auth::getInstance()->clearIdentity();  
+	    $this->_redirect('index');  
+	}
     
 }
