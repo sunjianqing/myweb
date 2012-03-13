@@ -21,34 +21,83 @@
 	</div>
 	
 	<div class='row well'>
-		<div class='span4'>
+		<div class='span3'>
 			<table class='people_tbl'>
 			  <tbody>
 			    <tr>
-			      <td><img src="images/passenger-2.png"/><br/><input type='radio' name='people'/>乘客</td>
+			      <td><img src="images/passenger-2.png"/><br/><input type='radio' name='people' id="passenger"/>乘客</td>
 			      <td>
 			      	<img src="images/attendee.png"/><br/>
-			      	<input type='radio' name='people'/>&nbsp;参与者
+			      	<input type='radio' name='people' id="attendee"/>&nbsp;参与者
 			      </td>
 			    </tr>
 			    <tr>
-			      <td><img src="images/driver.png"/><br/><input type='radio' name='people'/><label class='people_label'>司机</label></td>
-			      <td><img src="images/planner.png"/><br/><input type='radio' name='people'/>策划者</td>
+			      <td><img src="images/driver.png"/><br/><input type='radio' name='people' id="driver"/><label class='people_label'>司机</label></td>
+			      <td><img src="images/planner.png"/><br/><input type='radio' name='people' id="planner"/>策划者</td>
 			    </tr>
 			  </tbody>
 			</table>
-		
 		</div>
 		<div class='span4'>
-			
 			Image
 		</div>
-		<div class='span3'>
-			<div class='span3'><input type="text" placeholder="起始日期..." class="height28" onclick="calendar.show(this);"></div>
-			<div class='span3'><input type="text" placeholder="截止日期..." class="height28" onclick="calendar.show(this);"></div>
-			<div class='span3'><input type="text" placeholder="地点..." class="height28"></div>
-			<div class='span3'><a class="btn btn-large btn-primary" href="#">查询</a></div>
+		
+		<div class='span4 role_div' id="passenger_div" >
+			<div class='span4'>
+				<input type="text" placeholder="起点" class="height28 width100"/>
+				<input type="text" placeholder="终点" class="height28 width100"/>
+			</div>
+			<div class='span4'>
+				<input type="text" placeholder="出发日期..." class="height28" onclick="calendar.show(this);">
+				<input type="text" placeholder="返回日期..." class="height28" onclick="calendar.show(this);">
+				<input type="text" placeholder="价格$/人" class="height28">
+				<input type="text" placeholder="人数" class="height28">
+			</div>
+			<div class='span4'><a class="btn btn-large btn-primary" href="#">请求行程</a>
+			</div>
 		</div>
+		
+		<div class='span4 role_div hide	' id="driver_div" >
+			<div class='span4'>
+				<input type="text" placeholder="起点" class="height28 width100"/>
+				<input type="text" placeholder="终点" class="height28 width100"/>
+			</div>
+			<div class='span4'>
+				<input type="text" placeholder="出发日期..." class="height28" onclick="calendar.show(this);">
+				<input type="text" placeholder="返回日期..." class="height28" onclick="calendar.show(this);">
+				<input type="text" placeholder="价格$/人" class="height28">
+				<input type="text" placeholder="空座" class="height28">
+			</div>
+			<div class='span4'>
+				<a class="btn btn-large btn-primary" href="#" id='submit_driver'>发布行程</a>
+			</div>
+		</div>
+		
+		<div class='span3 role_div hide' id="attendee_div" >
+			
+			<div class='span4'>
+				<input type="text" placeholder="活动" class="height28">
+				<input type="text" placeholder="时间" class="height28" onclick="calendar.show(this);">
+				<input type="text" placeholder="地点" class="height28">
+				<input type="text" placeholder="价格$/人" class="height28">
+				<input type="text" placeholder="人数" class="height28">
+			</div>
+			
+			<div class='span3'><a class="btn btn-large btn-primary" href="#" id='submit_driver'>建议活动</a></div>
+		</div>
+		
+		<div class='span3 role_div hide' id="planner_div" >
+			<div class='span4'>
+				<input type="text" placeholder="活动" class="height28">
+				<input type="text" placeholder="时间" class="height28" onclick="calendar.show(this);">
+				<input type="text" placeholder="地点" class="height28">
+				<input type="text" placeholder="价格$/人" class="height28">
+				<input type="text" placeholder="人数" class="height28">
+			</div>
+			
+			<div class='span3'><a class="btn btn-large btn-primary" href="#" id='submit_driver'>发起活动</a></div>
+		</div>
+		
 	</div>
 	<hr>
 	<div class='row'>
