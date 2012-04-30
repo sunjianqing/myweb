@@ -1,89 +1,132 @@
-
 <div class='container' id='main_container'>
 <div class="row">
 	<div class='row box' id='gallery_div'>
 		<div class='span12'>
 			<div class="row">
+				
 				<div class="span8">
 					<div class="slider-wrapper theme-default">
 			            <div id="slider" class="nivoSlider">
-			                <img src="images/toystory.jpg" alt="" />
+			                <img src="images/napa1.png" alt="" title="Napa 一日游活动" />
+			                <!--  
 			                <a href="http://dev7studios.com"><img src="images/up.jpg" alt="" title="This is an example of a caption" /></a>
-			                <img src="images/walle.jpg" alt="" data-transition="slideInLeft" />
-			                <img src="images/nemo.jpg" alt="" title="#htmlcaption" />
+			                -->
+			                <img src="images/napa3.png" alt="" title="Napa 一日游活动" />
+			                <img src="images/napa4.png" alt="" title="Napa 一日游活动" />
+			                <img src="images/napa2.png" alt="" title="" />
+			                <img src="images/sonoma1.png" alt="" title="sonama 旅行" />
+			                 <img src="images/laketahoe2.jpg" alt="" title="Lake Tahoe 之旅" />
+			               
 			            </div>
             		</div>
 				</div>
-				<div class="span4 box3">Ranking</div>
 				
+				<div class="span3">
+				<br/>
+				<br/>
+				<br/>
+					<img src="images/dbay_logo1.png" />
+				</div>
 			</div>
 		</div>
 	</div>
 	
-	<div class='row well'>
-		<div class='span3'>
+	<div class='row well' id="main_edit_div">
+		<div class='span4'>
 			<table class='people_tbl'>
 			  <tbody>
 			    <tr>
-			      <td><img src="images/passenger-2.png"/><br/><input type='radio' name='people' id="passenger"/>乘客</td>
 			      <td>
-			      	<img src="images/attendee.png"/><br/>
-			      	<input type='radio' name='people' id="attendee"/>&nbsp;参与者
+			      	<div class="row" style="height: 78px;">
+			      		<img src="images/passenger-2.png"/>
+			      	</div>
+			      	<div  class="row">	
+			      		<input type='radio' checked name='people' id="passenger"/>乘客
+			      	</div>
+			      </td>
+			      <td>
+			      	<div class="row">
+			      		<img src="images/attendee.png"/>
+			      	</div>
+			      	<div class="row">
+			      		<span><input type='radio' name='people' id="attendee"/></span>
+			      		<span>参与者</span>
+			      	</div>
 			      </td>
 			    </tr>
 			    <tr>
-			      <td><img src="images/driver.png"/><br/><input type='radio' name='people' id="driver"/><label class='people_label'>司机</label></td>
-			      <td><img src="images/planner.png"/><br/><input type='radio' name='people' id="planner"/>策划者</td>
+					<td>
+						<div class="row">
+							<img src="images/driver.png"/>
+						</div>
+						<div class="row">
+						
+							<input type='radio' name='people' id="driver"/>
+							司机
+						
+						</div>
+					</td>
+			      <td>
+			      	<div class="row">
+			      		<img src="images/planner.png"/>
+			      	</div>
+			      	<div  class="row">
+			      		<input type='radio' name='people' id="planner"/>策划者
+			      	</div>
+			      	</td>
 			    </tr>
 			  </tbody>
 			</table>
 		</div>
-		<div class='span4'>
-			Image
+		
+		<div class='span3'>
+			<img src="images/arrow.png" id='single_logo'/>
 		</div>
 		
 		<div class='span4 role_div' id="passenger_div" >
 			<div class='span4'>
-				<input type="text" placeholder="起点" class="height28 width100"/>
-				<input type="text" placeholder="终点" class="height28 width100"/>
+				<input id="passenger_from_addr" name="passenger_from_addr" type="text" placeholder="起点" class="height28 width100"/>
+				<input id="passenger_to_addr" name="passenger_to_addr" type="text" placeholder="终点" class="height28 width100"/>
 			</div>
 			<div class='span4'>
-				<input type="text" placeholder="出发日期..." class="height28" onclick="calendar.show(this);">
-				<input type="text" placeholder="返回日期..." class="height28" onclick="calendar.show(this);">
-				<input type="text" placeholder="价格$/人" class="height28">
-				<input type="text" placeholder="人数" class="height28">
+				<input id="passenger_start_date" name="passenger_start_date" type="text" placeholder="出发日期..." class="height28" onclick="calendar.show(this);">
+				<input id="passenger_end_date" name="passenger_end_date" type="text" placeholder="返回日期..." class="height28" onclick="calendar.show(this);">
+				<input id="passenger_price" name="passenger_price" type="text" placeholder="价格$/人" class="height28">
+				<input id="passenger_people_num" name="passenger_people_num" type="text" placeholder="人数" class="height28">
 			</div>
-			<div class='span4'><a class="btn btn-large btn-primary" href="#">请求行程</a>
+			<div class='span4'>
+				<button class="submit btn btn-large btn-primary" id="request_ride">请求行程</button>
 			</div>
 		</div>
 		
+		
 		<div class='span4 role_div hide	' id="driver_div" >
 			<div class='span4'>
-				<input type="text" placeholder="起点" class="height28 width100"/>
-				<input type="text" placeholder="终点" class="height28 width100"/>
+				<input id="driver_from_addr" name="driver_from_addr" type="text" placeholder="起点" class="height28 width100"/>
+				<input  id="driver_to_addr" name="driver_to_addr" type="text" placeholder="终点" class="height28 width100"/>
 			</div>
 			<div class='span4'>
-				<input type="text" placeholder="出发日期..." class="height28" onclick="calendar.show(this);">
-				<input type="text" placeholder="返回日期..." class="height28" onclick="calendar.show(this);">
-				<input type="text" placeholder="价格$/人" class="height28">
-				<input type="text" placeholder="空座" class="height28">
+				<input id="driver_start_date" name="driver_start_date" type="text" placeholder="出发日期..." class="height28" onclick="calendar.show(this);">
+				<input id="driver_end_date" name="driver_end_date" type="text" placeholder="返回日期..." class="height28" onclick="calendar.show(this);">
+				<input id="driver_price" name=driver_price type="text" placeholder="价格$/人" class="height28">
+				<input id="driver_seat_num" name="driver_seat_num" type="text" placeholder="空座" class="height28">
 			</div>
 			<div class='span4'>
-				<a class="btn btn-large btn-primary" href="#" id='submit_driver'>发布行程</a>
+				<a class="btn btn-large btn-primary" href="#" id='post_ride'>发布行程</a>
 			</div>
 		</div>
 		
 		<div class='span3 role_div hide' id="attendee_div" >
 			
 			<div class='span4'>
-				<input type="text" placeholder="活动" class="height28">
-				<input type="text" placeholder="时间" class="height28" onclick="calendar.show(this);">
-				<input type="text" placeholder="地点" class="height28">
-				<input type="text" placeholder="价格$/人" class="height28">
-				<input type="text" placeholder="人数" class="height28">
+				<input id="activity_name" name="activity_name"  type="text" placeholder="活动" class="height28">
+				<input id="activity_date" name="activity_date" type="text" placeholder="时间" class="height28" onclick="calendar.show(this);">
+				<input id="activity_address" name="activity_address" type="text" placeholder="地点" class="height28">
+				<input id="activity_price" name="activity_price" type="text" placeholder="价格$/人" class="height28">
+				<input id="activity_people_num" name="activity_people_num" type="text" placeholder="人数" class="height28">
 			</div>
 			
-			<div class='span3'><a class="btn btn-large btn-primary" href="#" id='submit_driver'>建议活动</a></div>
+			<div class='span3'><a class="btn btn-large btn-primary" href="#" id='suggest_activity'>建议活动</a></div>
 		</div>
 		
 		<div class='span3 role_div hide' id="planner_div" >
@@ -99,45 +142,85 @@
 		</div>
 		
 	</div>
+	
+	<div class="alert alert-success" id="submit_div">
+    			感谢您的提交！
+  	</div>
+	
+	
 	<hr>
-	<div class='row'>
-		
-		<div class='span7 box2'>
-			<div class="wp">
+	<div class='row overwrite_row'>
+		<div class='span7 slider_box overwrite_row'>
+			<div class="row overwrite_row">
+				<h2 class='title2'> 搭车信息 </h2>
+			</div>
+			<div class=" ride_slide">
 				<ul id="slider" class="slider">
-					<li><a class="fl" href="javascript:;"><img src="images/people.png" width="40px" height="40px" alt="" /></a>
-					<p>入山又恐别倾城  世间安得双全 不负如来不负卿</p>
-				    </li>
-					<li><a class="fl" href="javascript:;"><img src="images/people.png" width="40px" height="40px"  alt="" /></a>
-					<p>第一最好不相见，如此便可不相恋。</p>
+					<li><a class="fl" href="#"><img src="images/people.png" width="40px" height="40px" alt="" /></a>
+						<div class="row">
+							<div class="span3 ride_desc">San Francisco &lt;-&gt; San Jose </div>
+							<div class="span2 ride_price">$30/人</div>
+						</div>
 					</li>
 					<li><a class="fl" href="javascript:;"><img src="images/people.png" width="40px" height="40px"  alt="" /></a>
-					<p>那一天 闭目在经殿香雾</p>
+						<div class="row">
+							<div class="span3 ride_desc">Davic, CA &lt;-&gt; Lake Tahoe, CA </div>
+							<div class="span2 ride_price">$68/人</div>
+						</div>
+					</li>
+					<li><a class="fl" href="javascript:;"><img src="images/people.png" width="40px" height="40px"  alt="" /></a>
+						<div class="row">
+							<div class="span3 ride_desc">Fremont,CA &lt;-&gt; Gilroy,CA</div>
+							<div class="span2 ride_price">$45/人</div>
+						</div>
+				    </li>
+				    <li><a class="fl" href="javascript:;"><img src="images/people.png" width="40px" height="40px"  alt="" /></a>
+						<div class="row">
+							<div class="span3 ride_desc">SJC &lt;-&gt; San Jose,CA </div>
+							<div class="span2 ride_price">$14/人</div>
+						</div>
+				    </li>
+				    <li><a class="fl" href="javascript:;"><img src="images/people.png" width="40px" height="40px"  alt="" /></a>
+						<div class="row">
+							<div class="span3 ride_desc">Berkeley,CA &lt;-&gt; Vacaville,CA </div>
+							<div class="span2 ride_price">$32/人</div>
+						</div>
 				    </li>
 					<li><a class="fl" href="javascript:;"><img src="images/people.png" width="40px" height="40px"  alt="" /></a>
-					<p> 你见 或者不见我  我就在那里 </p>
-				</li>
+						<div class="row">
+							<div class="span3 ride_desc">San Jose,CA &lt;-&gt; SFO </div>
+							<div class="span2 ride_price">$25/人</div>
+						</div>
+					</li>
 				</ul>
 			</div>
 		</div>
-		<div class='span5 box3'>
-			<div class='row'>
-				<dl>
-					<dt>情人节</dt>
-				</dl>
-				<!-- 
-				<ul id='activity_list'>
-					<li>
-						<p class='pull-left'>2月14日 情人节活动</p>
-					</li>
-					<li>
-						<p class='pull-left'>2月14日 情人节活动</p>
-					</li>
-					<li>
-						<p class='pull-left'>Napa 一日游活动</p>
-					</li>
-					 -->
-				</ul>
+		<div class='span5 activity_box'>
+			<div class="row overwrite_row">
+				<h2 class='title2'> 近期活动 </h2>
+			</div>
+			<div class='row overwrite_row'>
+					<dl>
+						<dt>旧金山一日游</dt>
+					</dl>
+					<dl>
+						<dt>Napa Valley Rober Mondavi 酒庄一日游</dt>
+					</dl>
+					<dl>
+						<dt>Monterey-Camel 一日游一站式Door To Door 接送</dt>
+					</dl>
+					<dl>
+						<dt>Berkeley -&gt; Mipitas Great Mall 一站式购物活动 </dt>
+					</dl>
+					<dl>
+						<dt>Muir Woods National Monument 红木国家公园旅行</dt>
+					</dl>
+					<dl>
+						<dt>Stanford Shopping Center 购物活动</dt>
+					</dl>
+					<dl>
+						<dt>Point Reyes National Seashore 包车旅行+摄影</dt>
+					</dl>
 			</div>
 		</div>
 		</div>
@@ -145,73 +228,7 @@
 	</div>
 </div>
 
-<!--
-<div class='outside_div'>
-	<div class='inside_div' id='header'>	
-		<div id='logo_div'>
-			<a href=""><img src="images/logo1.jpg" /></a>
-		</div>
-		<div id='title_bar_div'>
-			<ul class="nav-bar">
-				<li><a id='renren_login' class="partner_login" href="#">人人登陆</a></li>
-				<li><a class='nav_char' href="#">注册</a></li>
-				<li><a class='nav_char' href="#">登陆</a></li>
-			</ul>
-		</div>
-	</div>
-</div>
-<div class='outside_div'>
-	<div class='inside_div box' id='main'>
-		<div id='main_top'>
-			<div class='float_left box_div' id='search_div'>
-				<table>
-					<tr>
-						<td>起始:</<td><input type='text' id='from_date'></td>
-						<td>截止:</<td><input type='text' id='to_date'></td>
-						
-					</tr>
-				</table>
-			</div>
-			<div class='float_right' id='slide_image_div'>
-				图片
-			</div>
-		</div>
-		<div id='main_middle'>
-			<input type='text' value='Search' id="search_box"/>
-			<a class='link_btn'>信息查询</a>
-		</div>
-		<div id='main_bottom'>
-			<div id='sepr_line'></div>
-			<div class="wp">
-				<ul id="slider" class="slider">
-					<li><a class="fl" href="javascript:;"><img src="http://t1.qlogo.cn/mbloghead/b9127c4ca63961bace88/50" alt="" /></a>
-					<p>入山又恐别倾城  世间安得双全 不负如来不负卿</p>
-				    </li>
-					<li><a class="fl" href="javascript:;"><img src="http://t1.qlogo.cn/mbloghead/b9127c4ca63961bace88/50" alt="" /></a>
-					<p>第一最好不相见，如此便可不相恋。</p>
-					</li>
-					<li><a class="fl" href="javascript:;"><img src="http://t1.qlogo.cn/mbloghead/b9127c4ca63961bace88/50" alt="" /></a>
-					<p>那一天 闭目在经殿香雾</p>
-				    </li>
-					<li><a class="fl" href="javascript:;"><img src="http://t1.qlogo.cn/mbloghead/b9127c4ca63961bace88/50" alt="" /></a>
-					<p> 你见 或者不见我  我就在那里 </p>
-				</li>
-				</ul>
-			</div>
-			
-		</div>
-		
-	</div>
-</div>
-
--->
 <script type="text/javascript">
-//$(function() {
-//	$( "#from_date" ).datepicker();
-//	$( "#from_date" ).datepicker( "option", "dateFormat","yy-mm-dd");
-//	$( "#to_date" ).datepicker();
-//	$( "#to_date" ).datepicker( "option", "dateFormat","yy-mm-dd");
-//});
 
 $(function(){
 msgmove(); 

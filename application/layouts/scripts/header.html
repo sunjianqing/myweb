@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<link type="text/css" href="../css/main.css" rel="stylesheet" />
+
 <link type="text/css" href="../bootstrap/css/ui-lightness/jquery-ui-1.8.17.custom.css" rel="stylesheet" />
 <link rel="stylesheet" href="../css/slider/default/default.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="../css/slider/pascal/pascal.css" type="text/css" media="screen" />
@@ -10,11 +10,13 @@
 <link type="text/css" href="../bootstrap/css/bootstrap.css" rel="stylesheet" />
 <link rel="stylesheet" href="../css/slider/nivo-slider.css" type="text/css" media="screen" />
 <link rel="stylesheet" href="../css/slider/style.css" type="text/css" media="screen" />
+<link type="text/css" href="../css/main.css" rel="stylesheet" />
 <script type="text/javascript" src="../js/jquery-1.7.1.min.js"></script>
 <script type="text/javascript" src="../js/jquery-ui-1.8.17.custom.min.js"></script>
 <script type="text/javascript" src="../bootstrap/js/bootstrap.js"></script>
 <script type="text/javascript" src="../js/calendar.js"></script>
 <script type="text/javascript" src="../js/jquery.nivo.slider.pack.js"></script>
+<script type="text/javascript" src="../js/jquery.inputhints.min.js"></script>
 <script type="text/javascript" src="../js/index.js"></script>
 
 </head>
@@ -35,7 +37,7 @@
 			    <li class="active">
 			    	<a href="/">首页</a>
 			    </li>
-			    <li><a href="#">搭车</a></li>
+			    <li><a href="/ride/">搭车</a></li>
 			    <li><a href="#">活动</a></li>
 			    </ul>
 			    </div>
@@ -44,7 +46,7 @@
 						<li>
 							<?php 
 								if($this->userinfo)
-									echo "<a href='#'>".$this->userinfo->username."</li><li><a href='login/logout'>退出</a>";
+									echo "<a href='#'>".$this->userinfo->username.",你好</li><li><a href='login/logout'>退出</a>";
 								else{
 							?>
 				    				<a href="/login">登陆</a>
@@ -52,7 +54,12 @@
 								}
 				    		?>
 				    	</li>
-				    	<li><a href="/user/register">注册</a></li>
+				    	<li>
+				    		<?php 
+				    			if(!$this->userinfo)
+				    				echo '<a href="/user/register">注册</a>';
+							?>
+				    	</li>
 				    </ul>
 			    </div>
 			    </div>

@@ -1,7 +1,8 @@
-#Wed Feb 29 14:38:57 PST 2012
+#Sat Apr 28 21:11:28 PDT 2012
 eclipse.preferences.version=1
 encoding//application/layouts/scripts/footer.html=UTF-8
 encoding//application/views/scripts/index/index.phtml=UTF-8
 encoding//application/views/scripts/login/index.phtml=UTF-8
+encoding//application/views/scripts/ride/index.phtml=UTF-8
 encoding//application/views/scripts/user/profile.phtml=UTF-8
 encoding//application/views/scripts/user/register.phtml=UTF-8

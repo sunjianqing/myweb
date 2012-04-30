@@ -131,8 +131,8 @@ height: 65px;
 	border-top: 1px dashed #B4B8B7;
 	width:100%;
 }
-.wp {position: relative;width:100%;height:300px;overflow:hidden;margin:auto;background:#fff;}
-.slider {position: absolute;width: 100%;padding:0;left:0;top: 0;}
+
+.slider {position: relative ;width: 100%;padding:0;left:0;top: 0;}
 .fl {float:left}
 .slider img {display:block; padding: 2px; border: 1px solid #ccc} 
 .slider li {padding: 10px 0; border-bottom: 1px dashed #ccc;overflow:hidden;width:100%}
@@ -154,6 +154,7 @@ height: 65px;
 	border-width: 0px;
 	border-spacing: 5px;
 	border-collapse: separate;
+	width:100%;
 }
 .people_tbl td{
 	border-width: 1px;
@@ -172,13 +173,35 @@ height: 65px;
     margin-bottom: 20px;
     min-height: 20px;
 }
+.slider_box {
+	position: relative;
+	height:400px;
+	overflow:hidden;
+	margin:auto;
+	background:#fff;
+	border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
+	margin-left:-20px;
+}
+
+.activity_box{
+	height:400px;
+	overflow:hidden;
+	margin:0 0 0 20px;
+	background:#fff;
+	border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
+}
 
 .box2{
-	border: 1px solid #707070;
-	background-color: white;
-    border-radius: 5px 5px 5px 5px;
-    margin-top:15px;
-    margin-left:15px !important; 
+	background-color: #F5F5F5;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
+    margin-bottom: 20px;
+    min-height: 20px;
 }
 
 .box3{
@@ -210,6 +233,7 @@ list-style: none outside none;
 }
 .people_label{
 	padding-left:3px;
+	width:40px;
 }
 
 #main_container{
@@ -282,4 +306,48 @@ label {
 
 div.role_div a{
 	color:#ffffff;
+}
+
+.slider img{
+	margin-left:5px;
+}
+
+.slider .ride_price{
+	text-align:right;
+}
+
+.slider .ride_desc{
+	color:#0F88D9;
+	font-weight:500;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.overwrite_row{
+	margin-left:0px;
+}
+
+.activity_box dl{
+	border-bottom: 1px dashed #CCCCCC;
+	margin:10px 10px 0 10px;
+	height:30px;
+}
+
+.title2{
+	font-weight:800;
+	font-size:16px;
+	margin:10px 0 0 10px;
+}
+
+.ride_slide{
+	margin-top:20px;
+}
+
+
+#submit_div{
+	display:none;
+}
+
+#single_logo{
+	margin-top:50px;
+	margin-left:40px;
 }

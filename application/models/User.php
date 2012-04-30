@@ -15,7 +15,7 @@ class User extends Zend_Db_Table_Abstract {
    protected $_name = 'user';
    
    public function getUserByLogin($login){
-		$user = $this->fetchAll('login = "'.$login.'"')->toArray();
+		$user = $this->fetchAll('username = "'.$login.'"')->toArray();
 		return $user;
    }
    
@@ -31,5 +31,13 @@ class User extends Zend_Db_Table_Abstract {
  		*/
 		return !empty($res);
    }
+   
+	public  function createUser($username, $passwd, $email ){
+		$sql = "insert into user(`username`,`passwd`,`email`) values('$username','$passwd','$email')";	
+		$this->_db->query($sql);
+		
+   }
+   
+   
    
 }

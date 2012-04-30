@@ -21,6 +21,13 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
         $layout = $this->getResource('layout');
         $view = $layout->getView();
         //$view->user = $user = Zend_Auth::getInstance()->getStorage()->read();
+        // get the user info from the storage (session)
+        $userInfo = Zend_Auth::getInstance()->getStorage()->read();
+        
+        if(!empty($userInfo)){
+        	$view->userinfo = $userInfo;
+        }
+        
 	}
 
 }
