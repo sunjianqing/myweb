@@ -65,6 +65,8 @@ class RideController extends Zend_Controller_Action{
 	}
 	
 	public function indexAction(){
+		$ride_num = $this->_request->ride;
 		
+		$this->view->ride_info = 1;
 	}
 }

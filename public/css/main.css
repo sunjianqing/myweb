@@ -351,3 +351,20 @@ div.role_div a{
 	margin-top:50px;
 	margin-left:40px;
 }
+
+.ride_box{
+	height:100%;
+	overflow:hidden;
+	margin:0 0 10px 5px;
+	padding:5px;
+	background:#fff;
+	border: 1px solid rgba(0, 0, 0, 0.05);
+    border-radius: 4px 4px 4px 4px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
+}
+
+.ride_slide a{
+	color:#0F88D9;
+	font-weight:500;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
