@@ -7,15 +7,15 @@
 				<div class="span8">
 					<div class="slider-wrapper theme-default">
 			            <div id="slider" class="nivoSlider">
-			                <img src="images/napa1.png" alt="" title="Napa 一日游活动" />
+			                <img src="images/napa1.png" alt="" />
 			                <!--  
 			                <a href="http://dev7studios.com"><img src="images/up.jpg" alt="" title="This is an example of a caption" /></a>
 			                -->
-			                <img src="images/napa3.png" alt="" title="Napa 一日游活动" />
-			                <img src="images/napa4.png" alt="" title="Napa 一日游活动" />
-			                <img src="images/napa2.png" alt="" title="" />
-			                <img src="images/sonoma1.png" alt="" title="sonama 旅行" />
-			                 <img src="images/laketahoe2.jpg" alt="" title="Lake Tahoe 之旅" />
+			                <img src="images/napa3.png" alt=""  />
+			                <img src="images/napa4.png" alt=""  />
+			                <img src="images/napa2.png" alt="" />
+			                <img src="images/sonoma1.png" alt="" />
+			                 <img src="images/laketahoe2.jpg" alt="" />
 			               
 			            </div>
             		</div>
@@ -86,13 +86,13 @@
 		<div class='span4 role_div' id="passenger_div" >
 			<div class='span4'>
 				<input id="passenger_from_addr" name="passenger_from_addr" title="起点" type="text"  class="height28 width100"/>
-				<input id="passenger_to_addr" name="passenger_to_addr" type="text" placeholder="终点" class="height28 width100"/>
+				<input id="passenger_to_addr" name="passenger_to_addr" title="终点" type="text" placeholder="终点" class="height28 width100"/>
 			</div>
 			<div class='span4'>
-				<input id="passenger_start_date" name="passenger_start_date" type="text" placeholder="出发日期..." class="height28" onclick="calendar.show(this);">
-				<input id="passenger_end_date" name="passenger_end_date" type="text" placeholder="返回日期..." class="height28" onclick="calendar.show(this);">
-				<input id="passenger_price" name="passenger_price" type="text" placeholder="价格$/人" class="height28">
-				<input id="passenger_people_num" name="passenger_people_num" type="text" placeholder="人数" class="height28">
+				<input id="passenger_start_date" name="passenger_start_date" title="出发日期..." type="text" placeholder="出发日期..." class="height28" onclick="calendar.show(this);">
+				<input id="passenger_end_date" name="passenger_end_date" title="返回日期..." type="text" placeholder="返回日期..." class="height28" onclick="calendar.show(this);">
+				<input id="passenger_price" name="passenger_price" type="text" title="价格$/人" placeholder="价格$/人" class="height28">
+				<input id="passenger_people_num" name="passenger_people_num" title="人数" type="text" placeholder="人数" class="height28">
 			</div>
 			<div class='span4'>
 				<button class="submit btn btn-large btn-primary" id="request_ride">请求行程</button>
@@ -102,14 +102,14 @@
 		
 		<div class='span4 role_div hide	' id="driver_div" >
 			<div class='span4'>
-				<input id="driver_from_addr" name="driver_from_addr" type="text" placeholder="起点" class="height28 width100"/>
-				<input  id="driver_to_addr" name="driver_to_addr" type="text" placeholder="终点" class="height28 width100"/>
+				<input id="driver_from_addr" name="driver_from_addr" type="text" title="起点" placeholder="起点" class="height28 width100"/>
+				<input  id="driver_to_addr" name="driver_to_addr" type="text" title="终点"  placeholder="终点" class="height28 width100"/>
 			</div>
 			<div class='span4'>
-				<input id="driver_start_date" name="driver_start_date" type="text" placeholder="出发日期..." class="height28" onclick="calendar.show(this);">
-				<input id="driver_end_date" name="driver_end_date" type="text" placeholder="返回日期..." class="height28" onclick="calendar.show(this);">
-				<input id="driver_price" name=driver_price type="text" placeholder="价格$/人" class="height28">
-				<input id="driver_seat_num" name="driver_seat_num" type="text" placeholder="空座" class="height28">
+				<input id="driver_start_date" name="driver_start_date" type="text" title="出发日期..." placeholder="出发日期..." class="height28" onclick="calendar.show(this);">
+				<input id="driver_end_date" name="driver_end_date" type="text" title="返回日期..." placeholder="返回日期..." class="height28" onclick="calendar.show(this);">
+				<input id="driver_price" name=driver_price type="text" title="价格$/人" placeholder="价格$/人" class="height28">
+				<input id="driver_seat_num" name="driver_seat_num" type="text" title="空座" placeholder="空座" class="height28">
 			</div>
 			<div class='span4'>
 				<a class="btn btn-large btn-primary" href="#" id='post_ride'>发布行程</a>
@@ -119,11 +119,11 @@
 		<div class='span3 role_div hide' id="attendee_div" >
 			
 			<div class='span4'>
-				<input id="activity_name" name="activity_name"  type="text" placeholder="活动" class="height28">
-				<input id="activity_date" name="activity_date" type="text" placeholder="时间" class="height28" onclick="calendar.show(this);">
-				<input id="activity_address" name="activity_address" type="text" placeholder="地点" class="height28">
-				<input id="activity_price" name="activity_price" type="text" placeholder="价格$/人" class="height28">
-				<input id="activity_people_num" name="activity_people_num" type="text" placeholder="人数" class="height28">
+				<input id="activity_name" name="activity_name"  type="text" title="活动" placeholder="活动" class="height28">
+				<input id="activity_date" name="activity_date" type="text" title="时间" placeholder="时间" class="height28" onclick="calendar.show(this);">
+				<input id="activity_address" name="activity_address" type="text" title="地点" placeholder="地点" class="height28">
+				<input id="activity_price" name="activity_price" type="text" title="价格$/人" placeholder="价格$/人" class="height28">
+				<input id="activity_people_num" name="activity_people_num" type="text" title="人数" placeholder="人数" class="height28">
 			</div>
 			
 			<div class='span3'><a class="btn btn-large btn-primary" href="#" id='suggest_activity'>建议活动</a></div>
@@ -131,11 +131,11 @@
 		
 		<div class='span3 role_div hide' id="planner_div" >
 			<div class='span4'>
-				<input type="text" placeholder="活动" class="height28">
-				<input type="text" placeholder="时间" class="height28" onclick="calendar.show(this);">
-				<input type="text" placeholder="地点" class="height28">
-				<input type="text" placeholder="价格$/人" class="height28">
-				<input type="text" placeholder="人数" class="height28">
+				<input type="text" title="活动" placeholder="活动" class="height28">
+				<input type="text" title="时间" placeholder="时间" class="height28" onclick="calendar.show(this);">
+				<input type="text" title="地点" placeholder="地点" class="height28">
+				<input type="text" title="价格$/人" placeholder="价格$/人" class="height28">
+				<input type="text" title="人数" placeholder="人数" class="height28">
 			</div>
 			
 			<div class='span3'><a class="btn btn-large btn-primary" href="#" id='submit_driver'>发起活动</a></div>
