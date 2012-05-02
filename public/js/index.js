@@ -5,7 +5,7 @@
 function load_role_div(id){
 	var current_role_div = id+"_div";
 	$(".role_div").hide();
-	console.log(current_role_div);
+	//console.log(current_role_div);
 	$("#"+current_role_div).show();
 }
 
