@@ -1,4 +1,5 @@
 <?php
+
 require_once APPLICATION_PATH."/models/Ride.php";
 class RideController extends Zend_Controller_Action{
 	
@@ -66,7 +67,10 @@ class RideController extends Zend_Controller_Action{
 	
 	public function indexAction(){
 		$ride_num = $this->_request->ride;
+		$ride_obj = new Ride();
+		$ride_obj->setId($ride_num);
+		$ride_info = $ride_obj->getRideById();
 		
-		$this->view->ride_info = 1;
+		$this->view->ride_info = $ride_info[0];
 	}
 }

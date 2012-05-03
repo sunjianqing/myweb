@@ -1,13 +1,19 @@
 <div class='container' id='main_container'>
 <div class="row box3">
 	<div class="row">
-		<div class='span2'>
-			<h2 class='title2'> 搭车信息 </h2>
+		<div class='span5'>
+			<h2 class='title2'> 搭车信息 &nbsp; 
+				<?php if(!empty($this->ride_info['from_addr']) && !empty($this->ride_info['to_addr']) )
+					echo $this->ride_info['from_addr']."<->".$this->ride_info['to_addr'];	
+				?>
+			</h2>
 		</div>
 	</div>
 	<div class="row overwrite_row">
 		<div class='span12 ride_box'>
-			
+			<?php 
+				echo $this->ride_info['ride_desc'];
+			?>
 		</div>
 	</div>
 	

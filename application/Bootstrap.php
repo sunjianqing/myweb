@@ -12,6 +12,7 @@ class Bootstrap extends Zend_Application_Bootstrap_Bootstrap
 		$init_db->setFetchMode(Zend_Db::FETCH_ASSOC);
         Zend_Registry::set($dbs['params']['dbname'], $init_db);
         Zend_Db_Table::setDefaultAdapter($init_db); 
+        $init_db->query("SET NAMES 'utf8'"); // show chinese character correctly
     }
     
 	protected function _initViewHelpers() {
