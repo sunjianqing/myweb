@@ -33,6 +33,7 @@ class User extends Zend_Db_Table_Abstract {
    }
    
 	public  function createUser($username, $passwd, $email ){
+		$passwd = md5($passwd);
 		$sql = "insert into user(`username`,`passwd`,`email`) values('$username','$passwd','$email')";	
 		$this->_db->query($sql);
 		
